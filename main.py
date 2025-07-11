@@ -10,6 +10,7 @@ def main():
     player = Player((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2))
     while True:
         screen.fill(000)
+        player.update(dt)
         player.draw(screen)
 
 
