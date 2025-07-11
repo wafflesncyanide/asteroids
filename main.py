@@ -33,6 +33,10 @@ def main():
             if rock.collision(player):
                 print("Game over!")
                 sys.exit()
+            for shot in shots:
+                if shot.collision(rock):
+                    shot.kill()
+                    rock.split()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
