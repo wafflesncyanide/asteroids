@@ -6,6 +6,11 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     while True:
         screen.fill(000)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+
         pygame.display.flip()
 
 
